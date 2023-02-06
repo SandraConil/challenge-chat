@@ -1,0 +1,19 @@
+<div class="container">
+    <p>Nos petits chatons</p>
+
+    <div>
+        <ul>
+            <li *ngFor="let element of arrayKitten; let index=index">
+                <img src="{{element.picture}}" alt="{{element.name}}" (mouseover)="affich=true"
+                    (mouseout)="affich=false">
+                <button (click)="adoptChat(element, index)">Adopter</button>
+                <div *ngIf="affich">
+                    <p>{{element.name}}</p>
+                </div>
+            </li>
+
+
+
+        </ul>
+    </div>
+</div>

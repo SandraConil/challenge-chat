@@ -1,0 +1,35 @@
+header {
+    height: 20vh;
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.main {
+   height: 65vh;
+   display: flex;
+   flex-direction: row;
+   background-color: rgb(170, 166, 166);
+
+}
+
+img {
+    height: 70%;
+  display: flex;
+}
+
+article {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  
+}
+footer{
+  height: 15vh;
+  background-color: aquamarine;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}

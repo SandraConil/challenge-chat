@@ -1,0 +1,22 @@
+<header>
+  <h1>Adopte un Chat</h1>
+  <img src="../assets/logo-1.png" alt="logo-1">
+</header>
+
+<div class="main">
+
+  <!-- je recupere mon tableau array chats que j'ai importé dans mon create kitten -->
+  <app-create-kitten [arrayKitten]="chats"></app-create-kitten>
+  <hr>
+                                        <!-- pour mettre le tableau utilisteur -->
+  <app-list-kitten [arrayKitten]="chats" [arrayUtilisateur]="userChat"></app-list-kitten>
+  <hr>
+
+  <app-user-kitten [arrayUtilisateur]="userChat"></app-user-kitten>
+  <hr>
+
+</div>
+
+<footer>
+  <p>Merci de votre visite</p>
+</footer>

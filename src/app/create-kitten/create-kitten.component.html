@@ -1,0 +1,28 @@
+<form action="post" [formGroup]="monForm" ngSubmit="onSubmit()"> 
+     <fieldset>
+     <label for="name">Le nom du chat </label>
+     <input type="text" name="nom" placeholder="nom du chat"  formControlName="name" > 
+     <p *ngIf="monForm.controls.name.errors" [style.color]="'red'">nom du chat est requis</p>
+    </fieldset>
+
+     <fieldset>
+    <label for="race">La race du chat</label>
+    <input type="text" name="race" placeholder="race du chat"  formControlName="race"> 
+    <p *ngIf="monForm.controls.race.errors" [style.color]="'red'">race du chat est requis</p>
+</fieldset>
+
+<fieldset>
+    <label for="picture">Photo :</label>
+    <input type="text" name="photo" placeholder="lien photo du chat" formControlName="picture" >
+</fieldset>
+
+<fieldset *ngIf="monForm.controls.born.errors">
+    <label for="born">Date de naissance :</label>
+    <input type="date" name="naissance" id="naissance" formControlName="born" >
+    <p *ngIf="monForm.controls.born.errors">date de naissance du chat est requis</p>
+</fieldset>
+
+    <button type="reset">Restaurer</button>
+    <button type="submit" (click)="createKitten()">Ajouter un chaton</button>
+
+</form>
